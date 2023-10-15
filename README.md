@@ -1,6 +1,6 @@
 # Digital_Processing_Image
 
-##Task 1
+## Task 1
 Build your framework for Signal processing. [USING PYTHON]
 Add to it the following features: 
 The ability to read samples of a signal from a txt file and display it in both continuous and discrete representations.
