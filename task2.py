@@ -354,11 +354,6 @@ shift_button.grid(row=4, column=2)
 result_label = tk.Label(frame, text="")
 result_label.grid(row=5, column=3, columnspan=3)
 
-# # Create a Matplotlib figure and canvas to display the signal
-# fig, ax = plt.subplots()
-# canvas = FigureCanvasTkAgg(fig, master=window)
-# canvas_widget = canvas.get_tk_widget()
-# canvas_widget.pack()
 
 # Start the tkinter main loop
 window.mainloop()
