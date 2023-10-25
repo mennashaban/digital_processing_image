@@ -188,26 +188,6 @@ def browse_file():
         signal = read_signal_from_file(file_paths[0])
         plot_signals(signal)
 
-
-
-
-# Function to normalize the signal on the Y-axis
-# def normalize_signal():
-#     global original_signal  # Declare original_signal as a global variable
-#     try:
-#         scaling_factor = float(entry_scale.get())
-#         normalized_signal = [(x[0], x[1] * scaling_factor) for x in original_signal]
-#
-#         ax.clear()
-#         original_x = [x[0] for x in original_signal]
-#         normalized_y = [x[1] for x in normalized_signal]
-#
-#         ax.plot(original_x, normalized_y, label='Normalized Signal', linestyle='-')
-#         ax.legend()
-#         canvas.draw()
-#     except ValueError:
-#         result_label.config(text="Invalid scaling factor!")
-
 # Function to upload a signal file
 def upload_signal():
     global original_signal  # Declare original_signal as a global variable
@@ -234,17 +214,6 @@ def shift_signal():
         canvas.draw()
     except ValueError:
         result_label.config(text="Invalid constant value!")
-
-# Function to upload a signal file
-# def upload_signal():
-#     file_path = filedialog.askopenfilename()
-#     if file_path:
-#         original_signal.clear()  # Clear the previous signal if any
-#         with open(file_path, 'r') as file:
-#             for line in file:
-#                 x, y = map(float, line.split())
-#                 original_signal.append((x, y))
-#         result_label.config(text="Signal uploaded successfully!")
 
 # Create a tkinter window
 window = tk.Tk()
@@ -318,16 +287,6 @@ browse_button.pack()
 upload_button = tk.Button(frame, text="Upload Signal", command=upload_signal)
 upload_button.grid(row=0, column=8)
 
-# label_scale = tk.Label(frame, text="Enter Scaling Factor:")
-# label_scale.grid(row=1, column=0)
-
-# entry_scale = tk.Entry(frame)
-# entry_scale.grid(row=1, column=1)
-
-
-# normalize_button = tk.Button(frame, text="Normalize Signal", command=normalize_signal)
-# normalize_button.grid(row=1, column=2)
-
 result_label = tk.Label(frame, text="")
 result_label.grid(row=2, column=0, columnspan=3)
 
@@ -337,10 +296,6 @@ fig, ax = plt.subplots()
 canvas = FigureCanvasTkAgg(fig, master=window)
 canvas_widget = canvas.get_tk_widget()
 canvas_widget.pack()
-
-
-# upload_button = tk.Button(frame, text="Upload Signal", command=upload_signal)
-# upload_button.grid(row=2, column=4)
 
 label_constant = tk.Label(frame, text="Enter Constant:")
 label_constant.grid(row=4, column=0)
