@@ -188,6 +188,7 @@ def browse_file():
         signal = read_signal_from_file(file_paths[0])
         plot_signals(signal)
 
+
 # Function to upload a signal file
 def upload_signal():
     global original_signal  # Declare original_signal as a global variable
@@ -214,6 +215,7 @@ def shift_signal():
         canvas.draw()
     except ValueError:
         result_label.config(text="Invalid constant value!")
+
 
 # Create a tkinter window
 window = tk.Tk()
@@ -297,6 +299,7 @@ canvas = FigureCanvasTkAgg(fig, master=window)
 canvas_widget = canvas.get_tk_widget()
 canvas_widget.pack()
 
+
 label_constant = tk.Label(frame, text="Enter Constant:")
 label_constant.grid(row=4, column=0)
 
@@ -309,6 +312,4 @@ shift_button.grid(row=4, column=2)
 result_label = tk.Label(frame, text="")
 result_label.grid(row=5, column=3, columnspan=3)
 
-
-# Start the tkinter main loop
 window.mainloop()
