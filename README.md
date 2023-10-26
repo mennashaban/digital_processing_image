@@ -24,3 +24,11 @@ Shifting: add to the signal a (+ve) or (-ve) constant.
 Normalization: normalize the signal from -1 to 1 or 0 to 1 depending on user choice. 
 
 Accumulation of input signal    1
+
+## Task 3
+The ability to quantize an input signal (its samples), the application should ask
+the user for the needed levels or number of bits available (in case of number of
+bits the application should compute from it the appropriate number of levels).
+Thereafter, the application should display the quantized signal and quantization
+error besides the encoded signal
+
